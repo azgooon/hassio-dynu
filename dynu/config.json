@@ -1,0 +1,43 @@
+{
+  "name": "Dynu {d}DNS",
+  "version": "0.0.1",
+  "slug": "dynu",
+  "description": "Free Dynamic DNS (DDNS) service with Let's Encrypt support",
+  "url": "https://github.com/azgooon/hassio-dynu",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "map": ["ssl:rw"],
+  "options": {
+    "lets_encrypt": {
+      "accept_terms": false,
+      "certfile": "fullchain.pem",
+      "keyfile": "privkey.pem"
+    },
+    "username": null,
+    "password": null,
+	"oauth2": {
+      "client": null,
+      "secret": null
+    },
+    "domains": [null],
+    "seconds": 300
+  },
+  "schema": {
+    "lets_encrypt": {
+      "accept_terms": "bool",
+      "certfile": "str",
+      "keyfile": "str"
+    },
+    "ipv4": "str?",
+    "ipv6": "str?",
+    "username": "str",
+    "password": "str",
+	"oauth2": {
+      "client": "str",
+      "secret": "str"
+    },
+    "domains": ["str"],
+    "seconds": "int"
+  },
+  "image": "ghcr.io/azgooon/hassio-dynu/{arch}"
+}

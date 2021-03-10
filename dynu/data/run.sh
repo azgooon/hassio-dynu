@@ -9,6 +9,7 @@ LE_UPDATE="0"
 # Dynu
 if bashio::config.has_value "ipv4"; then IPV4=$(bashio::config 'ipv4'); else IPV4=""; fi
 if bashio::config.has_value "ipv6"; then IPV6=$(bashio::config 'ipv6'); else IPV6=""; fi
+
 USERNAME=$(bashio::config 'username')
 PASSWORD=$(bashio::config 'password')
 CLIENT=$(bashio::config 'oauth2.client')

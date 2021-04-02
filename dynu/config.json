@@ -38,6 +38,5 @@
     },
     "domains": ["str"],
     "seconds": "int"
-  },
-  "image": "ghcr.io/azgooon/hassio-dynu/{arch}"
+  }
 }
